@@ -1,0 +1,29 @@
+### gemini経由 ###
+Host gemini
+HostName 133.82.130.7
+### ???を自分のユーザ名に変更 ###
+User ???
+ForwardX11Trusted yes
+ForwardX11Timeout 596h
+ServerAliveInterval 60
+GSSAPIAuthentication no
+
+Host aries carina centaurus cygnus crux canis cetus canser corona cassiopeia columba crater libra xphi1 pegasus 
+### ???を自分のユーザ名に変更 ###
+User ???
+ProxyCommand ssh -W %h:%p gemini
+ForwardX11Trusted yes
+ForwardX11Timeout 596h
+ServerAliveInterval 60
+GSSAPIAuthentication no
+###ここまで###
+
+### 外部から学内のネットワークに接続する際に使用 ##
+#Host ctunnel
+#Hostname 133.82.130.7
+#Protocol 2
+#DynamicForward 10090
+#### ???を自分のユーザ名に変更 ###
+#User ???
+#ServerAliveInterval 300
+#
