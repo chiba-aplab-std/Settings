@@ -118,6 +118,6 @@ $ssh ???
 ???には、ワークステーションの名前
 接続に成功すれば終了
 
-##Appendix $USBPATHの探し方
+## Appendix $USBPATHの探し方
 geminiは、pc負荷軽減のためGUI操作をしていない
 そのため、USBメモリを使うためにはgeminiにマウントする必要がある
