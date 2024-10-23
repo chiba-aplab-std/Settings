@@ -1,0 +1,21 @@
+ServerAliveInterval 300
+TCPKeepAlive yes
+
+
+###gemini経由###
+Host gemini
+HostName IPアドレス
+User ユーザーネーム
+ForwardX11 yes
+ServerAliveInterval 60
+ServerAliveCountMax 5
+#identityfile ~/.ssh/id_rsa
+#LocalForward   8888 localhost:8888
+
+Host サーバー名
+User ユーザーネーム
+ProxyCommand ssh -W %h:%p gemini
+ForwardX11 yes
+ServerAliveInterval 60
+#identityfile ~/.ssh/id_rsa
+#LocalForward   8888 localhost:8888
