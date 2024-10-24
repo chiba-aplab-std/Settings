@@ -54,9 +54,11 @@ geminiには、rootでログインする。
 以下アカウント作成手順・???にはStep 1と同じ自分のユーザ名
 (i) ユーザ作成
 geminiにユーザを追加し、/homeディレクトリに自分のユーザ名のディレクトリを作る
+またログインシェルをnologinに変更して外部から操作できないように設定する
 その後/homeディレクトリにできた自分のユーザ名のディレクトリに移動する
 ```
 $useradd -d /home/??? -g 501 -m ???
+$usermod -s /usr/sbin/nologin アカウント名
 $cd /home/???
 ```
 (ii) 公開鍵のコピー
@@ -83,12 +85,6 @@ $chown ???:aplab authorized_keys
 $cd ..
 $chmod 700 .ssh
 $chown ???:aplab .ssh
-```
-(vi) ユーザアカウントでのログインの禁止
-セキュリティの観点から、root以外でのアカウントでログインできないようにしています
-そのため、
-```
-chsh -s /sbin/nologin アカウント名
 ```
 
 geminiでの作業は以上で終了・ログアウトする。
